@@ -198,13 +198,13 @@ public class FlujoCompleto {
         Thread.sleep(500);
         driver.findElement(By.cssSelector(".react-datepicker__day--028:nth-child(3)")).click();
         Thread.sleep(500);
-        driver.findElement(By.cssSelector(".subjects-auto-complete__value-container")).click();
-        // Thread.sleep(1000);
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement element = wait
-                .until(ExpectedConditions.visibilityOfElementLocated(By.id("react-select-2-option-0")));
-        // element.sendKeys("Maths");
-        element.click();
+        
+        WebElement autoCompleteInput = driver.findElement(By.cssSelector(".subjects-auto-complete__value-container input"));
+        autoCompleteInput.sendKeys("Maths");
+    
+        WebElement desiredOption = driver.findElement(By.id("react-select-2-option-0"));
+        desiredOption.click();
+
         Thread.sleep(500);
         driver.findElement(By.cssSelector(".custom-checkbox:nth-child(3) > .custom-control-label")).click();
         Thread.sleep(500);

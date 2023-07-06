@@ -217,10 +217,10 @@ public class AppTest {
 
         WebElement autoCompleteInput = driver.findElement(By.cssSelector(".subjects-auto-complete__value-container input"));
         autoCompleteInput.sendKeys("Maths");
-    
+        Thread.sleep(500);
         WebElement desiredOption = driver.findElement(By.id("react-select-2-option-0"));
         desiredOption.click();
-        
+
         Thread.sleep(500);
         driver.findElement(By.cssSelector(".custom-checkbox:nth-child(3) > .custom-control-label")).click();
         Thread.sleep(500);
@@ -233,8 +233,7 @@ public class AppTest {
         driver.findElement(By.id("currentAddress"))
                 .sendKeys("Banco Industrial Zona 4. 7a. Avenida 5-10, Zona 4 Centro Financiero Torre I");
         Thread.sleep(300);
-        // driver.findElement(By.cssSelector(".css-1gtu0rj-indicatorContainer >
-        // .css-19bqh2r")).click();
+        
         WebDriverWait wait1 = new WebDriverWait(driver, 10); // Esperar un máximo de 10 segundos
         WebElement element1 = wait1
                 .until(ExpectedConditions

@@ -1,0 +1,8 @@
+### Ejecucion de un archivo de pruebas
+pytest <nombre_archivo_test>
+
+#Generador de archivo de librerias
+python -m pip freeze > requirements.txt
+
+#Instalar archivo de libreriras
+python -m pip install -r requirements.txt
